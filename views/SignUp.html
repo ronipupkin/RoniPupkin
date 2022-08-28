@@ -8,20 +8,27 @@
     <link rel="stylesheet" href="../static/StyleSheet.css">
 </head>
 <body>
-    <img src="../static/logo.png" alt="Logo">
-    <form  id="signUp_form" action="createProfile.html"> <!--Update action-->
-        <h1>Create your Account</h1>
-        <label for="UserName">UserName: </label><br>
-        <input type="text" required id="UserName" class="input_signUp" name="UserName"><br>
-        <label for="Name">Name: </label><br>
-        <input type="text" required id="Name" class="input_signUp" name="Name"><br>
-        <label for="Password">Password: </label><br>
-        <input type="password" required id="Password" class="input_signUp" required minlength="8" name="UserName"><br>
-        <label for="email">Email: </label><br>
-        <input type="email" required id="email" name="email" class="input_signUp" required pattern="[^ @]*@[^ @]*.com"><br>
-        <label for="Birth-Date">Birth-Date: </label><br>
-        <input type="date" required id="Birth-Date" name="Birth-Date" class="input_signUp"><br>
-        <button type="submit" id="signUp_button">Sign Up</a></button>
-    </form>
+    <div id="container">
+        <div id="logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
+        <!--<div id="changing"></div>-->
+        <div id="Header">
+            <h1>Create your Account</h1>
+        </div>
+        <div id="form-container_sign-up">
+            <form  id="signUp_form" action="createProfile.html"> <!--Update action-->
+                <label for="email" id="LabelsId">Email: </label><br>
+                <input type="email" required id="email" name="email" class="input_signUp" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+                <p class="fillNotice">Email must be in current pattern: ___@___.__</p>
+                <label for="Name" id="LabelsId">Name: </label><br>
+                <input type="text" required id="Name" class="input_signUp" name="Name"><br>
+                <label for="Password" id="LabelsId">Password: </label><br>
+                <input type="password" required id="Password" class="input_signUp" required minlength="8" name="UserName"><br>
+                <p class="fillNotice">The password must be at least 8 characters long</p>
+                <label for="Birth-Date" id="LabelsId">Birth-Date: </label><br>
+                <input type="date" required id="Birth-Date" name="Birth-Date" class="input_signUp"><br>
+                <button type="submit" id="signUp_button">Sign Up</a></button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

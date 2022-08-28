@@ -11,20 +11,22 @@
 <body>
     <div id="container">
         <div id="logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
-        <div id="changing"></div>
+        <!--<div id="changing"></div>-->
         <div id="Header">
             <h1>Welcome to Auction House</h1>
         </div>
         <div id="form-container_sign-in">
             <form action="myprofile_itamar.html"> <!--Update action-->
                 <p class="formHeadings">Already have an account?</p>
-                <label for="UserName" id="signInHeaders">UserName: </label><br>
-                <input type="text" required id="UserName" class="input_signUp" name="UserName"><br>
-                <label for="password" id="signInHeaders">Password: </label><br>
+                <label for="email" id="LabelsId">Email: </label><br>
+                <input type="email" required id="email" name="email" class="input_signUp" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
+                <p class="fillNotice">Email must be in current pattern: ___@___.__</p>
+                <label for="password" id="LabelsId">Password: </label><br>
                 <input type="password" required id="password" class="input_signUp" required minlength="8" name="password"><br>
+                <p class="fillNotice">The password must be at least 8 characters long</p>
                 <button type="submit">Sign in</button>
             </form>
-            <button type="submit" id="NewHere_button">New here</a></button>
+            <button type="submit" id="NewHere_button">New here? <br> Join us</a></button>
         </div>
     </div>
     
