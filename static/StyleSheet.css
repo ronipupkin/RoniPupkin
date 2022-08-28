@@ -1,0 +1,106 @@
+
+@font-face {
+    font-family: Aboreto;
+    src: url(Aboreto-Regular.ttf);
+}
+
+:root {
+    --MyBlack: rgb(2, 2, 2);
+    --MyWhite: rgb(237, 240, 243);
+    --MyDarkerBlue: #257ba6;
+    --MyLighterBlue: #96e0ef;
+    --MyGreyBlue: #bcdcd6;
+}
+
+body{
+    background-image: url(../static/WallPaper.jpg);
+    background-size: cover;
+    font-family: Aboreto; 
+    padding: 5px;
+    margin: 5px;
+    font-size: 30px;
+}
+
+#container{
+    display: grid;
+    grid-template-areas: 
+    'logo Header Header'
+    'changing signIn signIn';
+}
+
+#changing{
+    grid-area: changing;
+    height: 350px;
+    width: 350px;
+    animation-name: Change;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    border-radius: 100%;
+    text-align: center;
+}
+
+#Header{
+    grid-area: Header;
+    height: 25vh;
+    text-align: center;
+}
+
+
+#logo{
+    grid-area: logo;
+    height: 25vh;
+    text-align: right;
+}
+
+#form-container_sign-in{
+    grid-area: signIn;
+    height: 45vh;
+    text-align: center;
+}
+
+#signInHeaders{
+    font-size: 25px;
+}
+
+.input_signUp{
+    padding: 7px;
+}
+
+button {
+	border-radius: 50%;
+	background-color: var(--MyGreyBlue);
+    border: 2px solid var(--MyDarkerBlue);
+    color: var(--MyDarkerBlue);
+	font-weight: bold;
+	letter-spacing: 2px;
+    padding: 12px 45px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 3%;
+}
+
+#NewHere_button{
+    background-color: var(--MyLighterBlue);
+}
+
+.formHeadings{
+    font-weight: bold;
+}
+
+@keyframes Change{
+    0%{
+        background-image: url(../static/coolItemToSale.png);
+    }
+    50%{
+        background-image: url(../static/cameRightPlace.png);
+    }
+    100%{
+        background-image: url(../static/coolItemToSale.png);
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload new item</title>
+    <link rel="stylesheet" href="../static/StyleSheet.css">
+</head>
+<body>
+    <div id="container">
+        <div id="logo"><img src="../static/AuctionHouseLogo.png" alt="Logo"></div>
+        <div id="Header">Upload a new item for auction</div>
+        <div id="Upload">
+            <form action="myprofile_itamar.html"> <!--Update action-->
+                <label for="ItemsName">Item’s name: </label><br>
+                <input type="text" required id="ItemsName" class="input_Upload" name="ItemsName"><br>
+                <label for="LastDate">Last date for suggestions: </label><br>
+                <input type="date" required id="LastDate" class="input_Upload" name="LastDate"><br>
+                <label for="Category">Category: </label><br>
+                <select name="Category" class="input_Upload" id="Category">
+                    <option value="MusicalInstruments">Musical Instruments</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Books">Books</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Comic">Comic</option>
+                    <option value="Cameras">Cameras</option>
+                    <option value="Headphones">Headphones</option>
+                    <option value="Watchs">Watchs</option>
+                    <option value="Else">Else</option>
+                </select><br>
+                <label for="Description">Description: </label><br>
+                <textarea name="Description" id="Description" cols="30" rows="10"></textarea><br>
+                <label for="ItemsPicture" >Upload Items's Picture:</label><br>
+                <input type="file" class="input_Upload" id="ItemsPicture" name="ItemsPicture"  accept="image/png, image/gif, image/jpeg" required><br>
+                <button type="submit">Upload item for auction</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
