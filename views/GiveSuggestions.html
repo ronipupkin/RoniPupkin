@@ -14,8 +14,11 @@
             <h1>Give suggestions for new items</h1>
         </div>
         <div id="Category">
-            <label for="Category">Search item by category: </label>
-            <select name="Category" class="input_Upload" id="Category">
+            <!--
+<label for="Category">Search item by category: </label>
+            -->
+            
+            <select name="Category" class="input_Upload" id="CategoryList">
                 <option value="MusicalInstruments">Musical Instruments</option>
                 <option value="Furniture">Furniture</option>
                 <option value="Books">Books</option>
@@ -26,33 +29,37 @@
                 <option value="Watchs">Watchs</option>
                 <option value="Else">Else</option>
             </select>
-            <button type="submit" id="chooseCategory_button">search</a></button>
+            <button type="submit" id="chooseCategory_button" class="Sugg_button">Search item by category</a></button>
         </div>
         <div id="Items_List">
-            <div class="">
-                <img src="../static/headphones.png" alt="" class="">
-                <h1>Headphones</h1>
-                <p class="">Orange headphones used by great musicians</p>
-                <p>Category: Musical Instruments</p>
-                <p>Last date for suggestions: 01/10/2022</p>
-                <p>Highest price offered yet: 200</p> 
-                <form action="myprofile_itamar.html"> <!--Update action-->
-                    <label for="OfferPrice">Offer price: </label>
-                    <input type="number" required id="OfferPrice" class="" name="OfferPrice">
-                    <button type="submit" onclick="">Send Offer</button>
-                </form>  
+            <div id="item1">
+                <div id="itemPicture"><img src="../static/headphones.png" alt="itemPicture"></div>
+                <div id="itemName"><p>Headphones</p></div>
+                <div id="itemDescription"><p>Orange headphones used by great musicians</p></div>
+                <div id="itemInfo">
+                    <p class="itemInfo">Category: Musical Instruments</p>
+                    <p class="itemInfo">Last date for suggestions: 01/10/2022</p>
+                    <p class="itemInfo">Highest price offered yet: 200</p> 
+                </div>
+                <div id="itemOffer">
+                    <form action="myprofile_itamar.html"> <!--Update action-->
+                        <label for="OfferPrice">Offer price: </label>
+                        <input type="number" required id="OfferPrice" class="" name="OfferPrice">
+                        <button type="submit" onclick="" class="Sugg_button">Send Offer</button>
+                    </form>
+                </div>
             </div>
-            <div class="">
-                <img src="../static/accordion.png" alt="" class="">
-                <h1>Accordion</h1>
-                <p class="">Black, white and red headphones used by great musicians</p>
-                <p>Category: Musical Instruments</p>
-                <p>Last date for suggestions: 11/10/2022</p>
-                <p>Highest price offered yet: 250</p> 
+            <div id="item2">
+                <img src="../static/accordion.png" alt="itemPicture" class="itemPicture">
+                <p class="itemName">Accordion</p>
+                <p class="itemDescription">Black, white and red headphones used by great musicians</p>
+                <p class="itemInfo">Category: Musical Instruments</p>
+                <p class="itemInfo">Last date for suggestions: 11/10/2022</p>
+                <p class="itemInfo">Highest price offered yet: 250</p> 
                 <form action="myprofile_itamar.html"> <!--Update action-->
                     <label for="OfferPrice">Offer price: </label>
                     <input type="number" required id="OfferPrice" class="" name="OfferPrice">
-                    <button type="submit" onclick="">Send Offer</button>
+                    <button type="submit" onclick="" class="Sugg_button">Send Offer</button>
                 </form>  
             </div>
         </div>

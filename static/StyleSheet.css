@@ -83,10 +83,25 @@ body{
     grid-area: Items_List;
     height: 45vh;
     text-align: center;
+    display: grid;
+    grid-template-areas: 
+    'item1 item2';
 }
 
 #form-container_sign-in{
     grid-area: signIn;
+    height: 45vh;
+    text-align: center;
+}
+
+#item1{
+    grid-area: item1;
+    height: 45vh;
+    text-align: center;
+}
+
+#item2{
+    grid-area: item2;
     height: 45vh;
     text-align: center;
 }
@@ -127,7 +142,7 @@ button {
 	letter-spacing: 2px;
     padding: 12px 45px;
 	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+	/*transition: transform 80ms ease-in;*/
     cursor: pointer;
     font-size: 20px;
     margin-top: 3%;
@@ -142,12 +157,23 @@ button {
 }
 */
 
+.Sugg_button{
+    border-radius: 8px;
+    padding: 8px 40px;
+}
+
 .formHeadings{
     font-weight: bold;
     font-size: 25px;
 }
 
 .custom_select{
+    font-family: Aboreto; 
+    font-size: 20px;
+    padding: 7px;
+}
+
+#CategoryList{
     font-family: Aboreto; 
     font-size: 20px;
     padding: 7px;
