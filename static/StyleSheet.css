@@ -22,16 +22,31 @@ body{
     font-family: Aboreto; 
     padding: 5px;
     margin: 5px;
-    font-size: 30px;
+    font-size: 28px;
 }
 
-#container{
+#OS_container{
     display: grid;
     grid-template-areas: 
     'logo Header Header'
-    'logo signIn signIn';
+    'logo signIn SignUp';
 }
 
+#SU_container{
+    display: grid;
+    grid-template-areas: 
+    'logo Header Header'
+    'logo signUpPage signUpPage';
+}
+
+#GiveSuggestions_container{
+    display: grid;
+    grid-template-areas: 
+    'logo Header Header'
+    'logo Category Category'
+    'logo Items_List Items_List';
+}
+/*
 #changing{
     grid-area: changing;
     height: 350px;
@@ -42,7 +57,7 @@ body{
     border-radius: 100%;
     text-align: center;
 }
-
+*/
 #Header{
     grid-area: Header;
     height: 20vh;
@@ -58,20 +73,38 @@ body{
     text-align: right;
 }
 
+#Category{
+    grid-area: Category;
+    height: 10vh;
+    text-align: center;
+}
+
+#Items_List{
+    grid-area: Items_List;
+    height: 45vh;
+    text-align: center;
+}
+
 #form-container_sign-in{
     grid-area: signIn;
     height: 45vh;
     text-align: center;
 }
 
-#form-container_sign-up{
-    grid-area: signIn;
+#SignUp{
+    grid-area: SignUp;
     height: 45vh;
     text-align: center;
 }
 
-#LabelsId{
-    font-size: 25px;
+#form-container_sign-up{
+    grid-area: signUpPage;
+    height: 45vh;
+    text-align: center;
+}
+
+#Labels_Id{
+    font-size: 23px;
 }
 
 .input_signUp{
@@ -100,16 +133,26 @@ button {
     margin-top: 3%;
 }
 
+/*
 #NewHere_button{
     background-color: var(--MyPurple);
     color: var(--MyDarkerPurple);
     border: 2px solid var(--MyDarkerPurple);
     
 }
+*/
 
 .formHeadings{
     font-weight: bold;
+    font-size: 25px;
 }
+
+.custom_select{
+    font-family: Aboreto; 
+    font-size: 20px;
+    padding: 7px;
+}
+
 
 @keyframes Change{
     0%{

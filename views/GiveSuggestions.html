@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="../static/StyleSheet.css">
 </head>
 <body>
-    <div id="GiveSuggestions _container">
-        <div id="logo"><img src="../static/AuctionHouseLogo.png" alt="Logo"></div>
-        <div id="Header">Give suggestions for new items</div>
+    <div id="GiveSuggestions_container">
+        <div id="logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
+        <div id="Header">
+            <h1>Give suggestions for new items</h1>
+        </div>
         <div id="Category">
             <label for="Category">Search item by category: </label>
             <select name="Category" class="input_Upload" id="Category">
@@ -26,31 +28,33 @@
             </select>
             <button type="submit" id="chooseCategory_button">search</a></button>
         </div>
-        <div class="">
-            <img src="../static/headphones.png" alt="" class="">
-            <h1>Headphones</h1>
-            <p class="">Orange headphones used by great musicians</p>
-            <p>Category: Musical Instruments</p>
-            <p>Last date for suggestions: 01/10/2022</p>
-            <p>Highest price offered yet: 200</p> 
-            <form action="myprofile_itamar.html"> <!--Update action-->
-                <label for="OfferPrice">Offer price: </label>
-                <input type="number" required id="OfferPrice" class="" name="OfferPrice">
-                <button type="submit" onclick="">Send Offer</button>
-            </form>  
-        </div>
-        <div class="">
-            <img src="../static/accordion.png" alt="" class="">
-            <h1>Accordion</h1>
-            <p class="">Black, white and red headphones used by great musicians</p>
-            <p>Category: Musical Instruments</p>
-            <p>Last date for suggestions: 11/10/2022</p>
-            <p>Highest price offered yet: 250</p> 
-            <form action="myprofile_itamar.html"> <!--Update action-->
-                <label for="OfferPrice">Offer price: </label>
-                <input type="number" required id="OfferPrice" class="" name="OfferPrice">
-                <button type="submit" onclick="">Send Offer</button>
-            </form>  
+        <div id="Items_List">
+            <div class="">
+                <img src="../static/headphones.png" alt="" class="">
+                <h1>Headphones</h1>
+                <p class="">Orange headphones used by great musicians</p>
+                <p>Category: Musical Instruments</p>
+                <p>Last date for suggestions: 01/10/2022</p>
+                <p>Highest price offered yet: 200</p> 
+                <form action="myprofile_itamar.html"> <!--Update action-->
+                    <label for="OfferPrice">Offer price: </label>
+                    <input type="number" required id="OfferPrice" class="" name="OfferPrice">
+                    <button type="submit" onclick="">Send Offer</button>
+                </form>  
+            </div>
+            <div class="">
+                <img src="../static/accordion.png" alt="" class="">
+                <h1>Accordion</h1>
+                <p class="">Black, white and red headphones used by great musicians</p>
+                <p>Category: Musical Instruments</p>
+                <p>Last date for suggestions: 11/10/2022</p>
+                <p>Highest price offered yet: 250</p> 
+                <form action="myprofile_itamar.html"> <!--Update action-->
+                    <label for="OfferPrice">Offer price: </label>
+                    <input type="number" required id="OfferPrice" class="" name="OfferPrice">
+                    <button type="submit" onclick="">Send Offer</button>
+                </form>  
+            </div>
         </div>
     </div>
 </body>
