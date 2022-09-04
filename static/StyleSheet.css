@@ -11,18 +11,19 @@
     --MyDarkerBlue: #257ba6;
     --MyLighterBlue: #96e0ef;
     --MyGreyBlue: #bcdcd6;
+    --MyLight:  #e5dff0; 
     --MyPurple: #d3c5df;
     --MyDarkerPurple: #8630d1;
     --MyRed: #db2505;
+    --MyGrey: #808080;
 }
 
 body{
     background-image: url(../static/WallPaper.jpg);
     background-size: cover;
     font-family: Aboreto; 
-    padding: 5px;
-    margin: 5px;
-    font-size: 28px;
+    padding: 1px;
+    margin: 1px;
 }
 
 #OS_container{
@@ -43,9 +44,17 @@ body{
     display: grid;
     grid-template-areas: 
     'logo Header Header'
-    'logo Category Category'
+    'logo SCategory SCategory'
     'logo Items_List Items_List';
 }
+
+#NI_container{
+    display: grid;
+    grid-template-areas: 
+    'logo Header'
+    'logo Upload';
+}
+
 /*
 #changing{
     grid-area: changing;
@@ -58,50 +67,45 @@ body{
     text-align: center;
 }
 */
-#Header{
+#Container_Header{
     grid-area: Header;
     height: 20vh;
+    width: 85vw;
     text-align: center;
     letter-spacing: 1px;
     word-spacing: 10px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 
-#logo{
+#Container_Logo{
     grid-area: logo;
     height: 20vh;
+    width: 10vw;
     text-align: right;
 }
 
-#Category{
-    grid-area: Category;
+#Upload{
+    grid-area: Upload;
+    height: 45vh;
+    text-align: center;
+}
+
+#SearchCategory{
+    grid-area: SCategory;
     height: 10vh;
     text-align: center;
 }
 
 #Items_List{
     grid-area: Items_List;
-    height: 45vh;
+    height: 20vh;
     text-align: center;
-    display: grid;
-    grid-template-areas: 
-    'item1 item2';
 }
 
 #form-container_sign-in{
     grid-area: signIn;
-    height: 45vh;
-    text-align: center;
-}
-
-#item1{
-    grid-area: item1;
-    height: 45vh;
-    text-align: center;
-}
-
-#item2{
-    grid-area: item2;
     height: 45vh;
     text-align: center;
 }
@@ -118,12 +122,74 @@ body{
     text-align: center;
 }
 
+#item{
+    background-color:  var(--MyLight);
+    float: left;
+    height: 45vh;
+    width: 22vw;
+    border-radius: 10%;
+    padding-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    font-size: 12px;
+}
+
+/*
+.Item1{
+    background-color:  var(--MyLight);
+    float: left;
+    width: 40%;
+    border-radius: 10%;
+    margin: 3%;
+    text-align: center;
+    font-size: larger;
+    padding-bottom: 3%;
+    font-weight: bold;
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+
+#List_Items::after{
+    content: "";
+    clear: both;
+    display: table;
+    justify-content: center;
+  }
+*/
+
+#itemDescription{
+    font-weight: bold;
+}
+
+.PictureItem{
+    margin-top: 1%;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vh;
+}
+
+
+
 #Labels_Id{
     font-size: 23px;
 }
 
-.input_signUp{
+.input_signUp, .input_Upload{
     padding: 7px;
+    border: 2px solid var(--MyGrey);
+    border-radius: 8px;
+}
+
+.PriceOffer{
+    border: 2px solid var(--MyGrey);
+    border-radius: 8px;
+}
+
+#LastDate, #Birth-Date{
+    font-family: Aboreto; 
 }
 
 .fillNotice{
@@ -157,10 +223,13 @@ button {
 }
 */
 
-.Sugg_button{
+.Sugg_button, .Upload_button{
     border-radius: 8px;
-    padding: 8px 40px;
+    padding: 7px 20px;
+    font-size: 15px;
+    cursor: pointer;
 }
+
 
 .formHeadings{
     font-weight: bold;
@@ -175,8 +244,9 @@ button {
 
 #CategoryList{
     font-family: Aboreto; 
-    font-size: 20px;
+    font-size: 15px;
     padding: 7px;
+    border-radius: 8px;
 }
 
 

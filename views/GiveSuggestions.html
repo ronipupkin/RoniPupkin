@@ -9,59 +9,82 @@
 </head>
 <body>
     <div id="GiveSuggestions_container">
-        <div id="logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
-        <div id="Header">
-            <h1>Give suggestions for new items</h1>
+        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
+        <div id="Container_Header">
+            <p>Give suggestions for new items</p>
         </div>
-        <div id="Category">
+        <div id="SearchCategory">
             <!--
-<label for="Category">Search item by category: </label>
+            <label for="Category">Search item by category: </label>
             -->
-            
-            <select name="Category" class="input_Upload" id="CategoryList">
-                <option value="MusicalInstruments">Musical Instruments</option>
-                <option value="Furniture">Furniture</option>
-                <option value="Books">Books</option>
-                <option value="Clothing">Clothing</option>
-                <option value="Comic">Comic</option>
-                <option value="Cameras">Cameras</option>
-                <option value="Headphones">Headphones</option>
-                <option value="Watchs">Watchs</option>
-                <option value="Else">Else</option>
-            </select>
-            <button type="submit" id="chooseCategory_button" class="Sugg_button">Search item by category</a></button>
+                <select name="Categories" class="input_Upload" id="CategoryList">
+                    <option value="MusicalInstruments">Musical Instruments</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Books">Books</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Comic">Comic</option>
+                    <option value="Cameras">Cameras</option>
+                    <option value="Headphones">Headphones</option>
+                    <option value="Watchs">Watchs</option>
+                    <option value="Else">Else</option>
+                </select>
+                <button type="submit" onclick="" id="chooseCategory_button" class="Sugg_button">Search item by category</a></button>
         </div>
-        <div id="Items_List">
-            <div id="item1">
-                <div id="itemPicture"><img src="../static/headphones.png" alt="itemPicture"></div>
-                <div id="itemName"><p>Headphones</p></div>
+        <div id="Items_List" class="List_Items">
+            <div id="item" class="Item1">
+                <div id="itemPicture"><img src="../static/headphones.png" alt="itemPicture" class="PictureItem"></div>
+                <div id="itemName"><h2>Headphones</h2></div>
                 <div id="itemDescription"><p>Orange headphones used by great musicians</p></div>
-                <div id="itemInfo">
-                    <p class="itemInfo">Category: Musical Instruments</p>
+                <div id="InfoItem">
+                    <p class="itemInfo">Category: Headphones</p>
                     <p class="itemInfo">Last date for suggestions: 01/10/2022</p>
                     <p class="itemInfo">Highest price offered yet: 200</p> 
                 </div>
                 <div id="itemOffer">
                     <form action="myprofile_itamar.html"> <!--Update action-->
                         <label for="OfferPrice">Offer price: </label>
-                        <input type="number" required id="OfferPrice" class="" name="OfferPrice">
+                        <input type="number" required id="OfferPrice" class="PriceOffer" name="OfferPrice"><br>
                         <button type="submit" onclick="" class="Sugg_button">Send Offer</button>
                     </form>
                 </div>
             </div>
-            <div id="item2">
-                <img src="../static/accordion.png" alt="itemPicture" class="itemPicture">
-                <p class="itemName">Accordion</p>
-                <p class="itemDescription">Black, white and red headphones used by great musicians</p>
-                <p class="itemInfo">Category: Musical Instruments</p>
-                <p class="itemInfo">Last date for suggestions: 11/10/2022</p>
-                <p class="itemInfo">Highest price offered yet: 250</p> 
-                <form action="myprofile_itamar.html"> <!--Update action-->
-                    <label for="OfferPrice">Offer price: </label>
-                    <input type="number" required id="OfferPrice" class="" name="OfferPrice">
-                    <button type="submit" onclick="" class="Sugg_button">Send Offer</button>
-                </form>  
+            <div id="item" class="Item1">
+                <div id="itemPicture"><img src="../static/accordion.png" alt="itemPicture" class="PictureItem"></div>
+                <div id="itemName"><h2>Accordion</h2></div>
+                <div id="itemDescription"><p>Black, white and red headphones used by great musicians</p></div>
+                <div id="InfoItem">
+                    <p class="itemInfo">Category: Musical Instruments</p>
+                    <p class="itemInfo">Last date for suggestions: 11/10/2022</p>
+                    <p class="itemInfo">Highest price offered yet: 250</p> 
+                </div>
+                <div id="itemOffer">
+                    <form action="myprofile_itamar.html"> <!--Update action-->
+                        <label for="OfferPrice">Offer price: </label>
+                        <input type="number" required id="OfferPrice" class="PriceOffer" name="OfferPrice"><br>
+                        <button type="submit" onclick="" class="Sugg_button">Send Offer</button>
+                    </form>
+                </div>
             </div>
+            
+            <div id="item" class="Item1">
+                <div id="itemPicture"><img src="../static/piano.png" alt="itemPicture" class="PictureItem"></div>
+                <div id="itemName"><h2>Piano</h2></div>
+                <div id="itemDescription"><p>Black piano</p></div>
+                <div id="InfoItem">
+                    <p class="itemInfo">Category: Musical Instruments</p>
+                    <p class="itemInfo">Last date for suggestions: 3/10/2022</p>
+                    <p class="itemInfo">Highest price offered yet: 550</p> 
+                </div>
+                <div id="itemOffer">
+                    <form action="myprofile_itamar.html"> <!--Update action-->
+                        <label for="OfferPrice">Offer price: </label>
+                        <input type="number" required id="OfferPrice" class="PriceOffer" name="OfferPrice"><br>
+                        <button type="submit" onclick="" class="Sugg_button">Send Offer</button>
+                    </form>
+                </div>
+            </div>
+            
+            
         </div>
     </div>
 </body>

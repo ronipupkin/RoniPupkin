@@ -9,10 +9,10 @@
 </head>
 <body>
     <div id="SU_container">
-        <div id="logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
+        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
         <!--<div id="changing"></div>-->
-        <div id="Header">
-            <h1>Create your Account</h1>
+        <div id="Container_Header">
+            <p>Create your Account</p>
         </div>
         <div id="form-container_sign-up">
             <form  id="signUp_form" action="createProfile.html"> <!--Update action-->
@@ -27,10 +27,12 @@
                 <label for="Birth-Date" id="Labels_Id">Birth-Date: </label><br>
                 <input type="date" required id="Birth-Date" name="Birth-Date" class="input_signUp"><br>
                 <label for="accountType" id="Labels_Id">Do you want to? </label><br>
-                <select name="accountType" class="custom_select" required id="accountType" size="2">
-                    <option value="Buyer">Buy</option>
-                    <option value="Seller">Sell</option>
-                </select><br>
+                <form action="" class="input_signUp">
+                    <input type="radio" id="Sell_Check" name="Want_to" value="SELL">
+                    <label for="Sell_Check">SELL</label>
+                    <input type="radio" id="Buy_Check" name="Want_to" value="BUY">
+                    <label for="Buy_Check">BUY</label>
+                </form>
                 <button type="submit" id="signUp_button">Sign Up</a></button>
             </form>
         </div>

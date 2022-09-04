@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="../static/StyleSheet.css">
 </head>
 <body>
-    <div id="container">
-        <div id="logo"><img src="../static/AuctionHouseLogo.png" alt="Logo"></div>
-        <div id="Header">Upload a new item for auction</div>
+    <div id="NI_container">
+        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
+        <div id="Container_Header">
+            <p>Upload a new item for auction</p>
+        </div>
         <div id="Upload">
             <form action="myprofile_itamar.html"> <!--Update action-->
-                <label for="ItemsName">Item’s name: </label><br>
+                <label for="ItemsName" id="Labels_Id">Item’s name: </label><br>
                 <input type="text" required id="ItemsName" class="input_Upload" name="ItemsName"><br>
-                <label for="LastDate">Last date for suggestions: </label><br>
+                <label for="LastDate" id="Labels_Id">Last date for suggestions: </label><br>
                 <input type="date" required id="LastDate" class="input_Upload" name="LastDate"><br>
-                <label for="Category">Category: </label><br>
-                <select name="Category" class="input_Upload" id="Category">
+                <label for="Category" id="Labels_Id">Category: </label><br>
+                <select name="Category" class="input_Upload" id="CategoryList">
                     <option value="MusicalInstruments">Musical Instruments</option>
                     <option value="Furniture">Furniture</option>
                     <option value="Books">Books</option>
@@ -29,11 +31,11 @@
                     <option value="Watchs">Watchs</option>
                     <option value="Else">Else</option>
                 </select><br>
-                <label for="Description">Description: </label><br>
-                <textarea name="Description" id="Description" cols="30" rows="10"></textarea><br>
-                <label for="ItemsPicture" >Upload Items's Picture:</label><br>
+                <label for="Description" id="Labels_Id">Description: </label><br>
+                <textarea name="Description" id="Description" cols="30" rows="10" class="input_Upload"></textarea><br>
+                <label for="ItemsPicture" id="Labels_Id">Upload Items's Picture:</label><br>
                 <input type="file" class="input_Upload" id="ItemsPicture" name="ItemsPicture"  accept="image/png, image/gif, image/jpeg" required><br>
-                <button type="submit">Upload item for auction</button>
+                <button type="submit" onclick="" class="Upload_button">Upload item for auction</button>
             </form>
         </div>
     </div>
