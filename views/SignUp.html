@@ -9,12 +9,12 @@
 </head>
 <body>
     <div id="SU_container">
-        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
+        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="120" height="120"></div>
         <!--<div id="changing"></div>-->
         <div id="Container_Header">
             <p>Create your Account</p>
         </div>
-        <div id="form-container_sign-up">
+        <div id="form-container_sign-up" class="info">
             <form  id="signUp_form" action="createProfile.html"> <!--Update action-->
                 <label for="email" id="Labels_Id">Email: </label><br>
                 <input type="email" required id="email" name="email" class="input_signUp" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
@@ -27,12 +27,10 @@
                 <label for="Birth-Date" id="Labels_Id">Birth-Date: </label><br>
                 <input type="date" required id="Birth-Date" name="Birth-Date" class="input_signUp"><br>
                 <label for="accountType" id="Labels_Id">Do you want to? </label><br>
-                <form action="" class="input_signUp">
                     <input type="radio" id="Sell_Check" name="Want_to" value="SELL">
-                    <label for="Sell_Check">SELL</label>
+                    <label for="Sell_Check">SELL</label><br>
                     <input type="radio" id="Buy_Check" name="Want_to" value="BUY">
-                    <label for="Buy_Check">BUY</label>
-                </form>
+                    <label for="Buy_Check">BUY</label><br>
                 <button type="submit" id="signUp_button">Sign Up</a></button>
             </form>
         </div>

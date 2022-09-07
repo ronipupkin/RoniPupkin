@@ -22,30 +22,28 @@ body{
     background-image: url(../static/WallPaper.jpg);
     background-size: cover;
     font-family: Aboreto; 
-    padding: 1px;
-    margin: 1px;
 }
 
 #OS_container{
     display: grid;
     grid-template-areas: 
-    'logo Header Header'
-    'logo signIn SignUp';
+    'logo Header '
+    'logo signIn ';
 }
 
 #SU_container{
     display: grid;
     grid-template-areas: 
-    'logo Header Header'
-    'logo signUpPage signUpPage';
+    'logo Header '
+    'logo signUpPage ';
 }
 
 #GiveSuggestions_container{
     display: grid;
     grid-template-areas: 
-    'logo Header Header'
-    'logo SCategory SCategory'
-    'logo Items_List Items_List';
+    'logo Header '
+    'logo SCategory '
+    'logo Items_List ';
 }
 
 #NI_container{
@@ -69,12 +67,12 @@ body{
 */
 #Container_Header{
     grid-area: Header;
-    height: 20vh;
-    width: 85vw;
+    height: 15vh;
+    width: 75vw;
     text-align: center;
     letter-spacing: 1px;
     word-spacing: 10px;
-    font-size: 50px;
+    font-size: 47px;
     font-weight: bold;
 }
 
@@ -84,56 +82,68 @@ body{
     height: 20vh;
     width: 10vw;
     text-align: right;
+
 }
 
 #Upload{
     grid-area: Upload;
-    height: 45vh;
+    height: 35vh;
     text-align: center;
+    line-height: 2;
 }
 
 #SearchCategory{
     grid-area: SCategory;
-    height: 10vh;
+    height: 5vh;
     text-align: center;
+    width: 75vw;
+    margin-bottom: 2%;
 }
+
+#searchLabel{
+    font-weight: bold;
+}
+
 
 #Items_List{
     grid-area: Items_List;
     height: 20vh;
     text-align: center;
+    width: 75vw;
+}
+
+.info{
+    margin-top: 15px; 
 }
 
 #form-container_sign-in{
     grid-area: signIn;
     height: 45vh;
     text-align: center;
+    width: 75vw;
+    line-height: 2;
 }
 
-#SignUp{
-    grid-area: SignUp;
-    height: 45vh;
-    text-align: center;
-}
 
 #form-container_sign-up{
     grid-area: signUpPage;
     height: 45vh;
     text-align: center;
+    width: 75vw;
 }
 
 #item{
     background-color:  var(--MyLight);
     float: left;
-    height: 45vh;
-    width: 22vw;
+    height: fit-content;
+    width: max-content;
     border-radius: 10%;
     padding-bottom: 1%;
     margin-left: 5%;
     margin-right: 2%;
     margin-bottom: 1%;
     margin-top: 2%;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /*
@@ -151,13 +161,6 @@ body{
     font-size: 20px;
 }
 
-
-#List_Items::after{
-    content: "";
-    clear: both;
-    display: table;
-    justify-content: center;
-  }
 */
 
 #itemDescription{
@@ -171,10 +174,9 @@ body{
     height: 10vh;
 }
 
-
-
 #Labels_Id{
     font-size: 23px;
+    line-height: 2;
 }
 
 .input_signUp, .input_Upload{
@@ -214,14 +216,14 @@ button {
     margin-top: 3%;
 }
 
-/*
+
 #NewHere_button{
     background-color: var(--MyPurple);
     color: var(--MyDarkerPurple);
     border: 2px solid var(--MyDarkerPurple);
     
 }
-*/
+
 
 .Sugg_button, .Upload_button{
     border-radius: 8px;
@@ -249,7 +251,7 @@ button {
     border-radius: 8px;
 }
 
-
+/*
 @keyframes Change{
     0%{
         background-image: url(../static/coolItemToSale.png);
@@ -261,7 +263,101 @@ button {
         background-image: url(../static/coolItemToSale.png);
     }
 }
+*/
 
-@media screen and (max-width: 1000px){
+@media only screen and (max-width: 800px){
 
+    #OS_container{
+        display: grid;
+        grid-template-areas: 
+        'logo'
+        'Header'
+        'signIn';
+    }
+    
+    #SU_container{
+        display: grid;
+        grid-template-areas: 
+        'logo'
+        'Header'
+        'signUpPage';
+    }
+    
+    #GiveSuggestions_container{
+        display: grid;
+        grid-template-areas: 
+        'logo'
+        'Header'
+        'SCategory'
+        'Items_List';
+    }
+    
+    #NI_container{
+        display: grid;
+        grid-template-areas: 
+        'logo'
+        'Header'
+        'Upload';
+    }
+
+    #Container_Header{
+        grid-area: Header;
+        height: 10vh;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    #Container_Logo{
+        grid-area: logo;
+        height: 15vh;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+    }
+
+    #form-container_sign-in{
+        grid-area: signIn;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #form-container_sign-up{
+        grid-area: signUpPage;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info{
+        margin-top: 70px;
+    }
+
+    #item{
+        background-color:  var(--MyLight);
+        float: center;
+        height: fit-content;
+        width: 50vw;
+        border-radius: 10%;
+        padding-bottom: 1%;
+        margin-left: 30%;
+        margin-right: 20%;
+        margin-bottom: 5%;
+        margin-top: 2%;
+        font-size: 15px;
+    }
+    
+    #SearchCategory{
+        grid-area: SCategory;
+        height: 10vh;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }

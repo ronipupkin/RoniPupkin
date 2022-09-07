@@ -9,14 +9,12 @@
 </head>
 <body>
     <div id="GiveSuggestions_container">
-        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
+        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="120" height="120"></div>
         <div id="Container_Header">
             <p>Give suggestions for new items</p>
         </div>
-        <div id="SearchCategory">
-            <!--
-            <label for="Category">Search item by category: </label>
-            -->
+        <div id="SearchCategory" class="info">
+            <label for="Category" id="searchLabel">Search item by category: </label>
                 <select name="Categories" class="input_Upload" id="CategoryList">
                     <option value="MusicalInstruments">Musical Instruments</option>
                     <option value="Furniture">Furniture</option>
@@ -28,9 +26,9 @@
                     <option value="Watchs">Watchs</option>
                     <option value="Else">Else</option>
                 </select>
-                <button type="submit" onclick="" id="chooseCategory_button" class="Sugg_button">Search item by category</a></button>
+                <button type="submit" onclick="" id="chooseCategory_button" class="Sugg_button">Search</a></button>
         </div>
-        <div id="Items_List" class="List_Items">
+        <div id="Items_List" class="info">
             <div id="item" class="Item1">
                 <div id="itemPicture"><img src="../static/headphones.png" alt="itemPicture" class="PictureItem"></div>
                 <div id="itemName"><h2>Headphones</h2></div>

@@ -10,14 +10,13 @@
 </head>
 <body>
     <div id="OS_container">
-        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="150"></div>
+        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="120" height="120"></div>
         <!--<div id="changing"></div>-->
         <div id="Container_Header">
             <p>Welcome to Auction House</p>
         </div>
-        <div id="form-container_sign-in">
+        <div id="form-container_sign-in" class="info">
             <form action="myprofile_itamar.html"> <!--Update action-->
-                <p class="formHeadings">Already have an account?</p>
                 <label for="email" id="Labels_Id">Email: </label><br>
                 <input type="email" required id="email" name="email" class="input_signUp" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br>
                 <p class="fillNotice">Email must be in current pattern: ___@___.__</p>
@@ -26,10 +25,8 @@
                 <p class="fillNotice">Password must be at least 8 characters long</p>
                 <button type="submit">Sign In</button>
             </form>
+            <button type="submit" id="NewHere_button">New here? <br> Join us</a></button>
         </div>
-        <div id="SignUp">
-            <p class="formHeadings">New here? <br> Join us</p><br>
-            <button type="submit" id="NewHere_button">Sign Up</a></button>
         </div>
     </div>
     
