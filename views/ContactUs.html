@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opening Screen - Auction House</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="../static/StyleSheet.css">
     <script defer src="../static/ProjectJS.js"></script>
 </head>
@@ -16,37 +16,35 @@
             <li class="list-item"><a href="ContactUs.html">Contact Us</a></li>
         </ul>
     </nav>
-    <div id="OS_container">
+    <div id="Contact_container">
         <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="120" height="120"></div>
-        <!--<div id="changing"></div>-->
         <div id="Container_Header">
-            <p>Welcome to Auction House</p>
+            <p>Tell us what's on your mind</p>
         </div>
-        <div id="form-container_sign-in" class="info">
-            <form action=""> <!--Update action-->
+        <div id="form-contact" class="info">
+            <form action="myprofile_itamar.html"> <!--Update action-->
                 <table cellpadding="10" cellspacing="3">
                     <tr> <td>
+                        <label for="name" id="Labels_Id">Name: </label>
+                    </td> <td>
+                        <input type="text" required id="name" name="name" class="input_signUp" placeholder="Israel Israeli"><br>                        
+                    </td> </tr> <tr> <td> 
                         <label for="email" id="Labels_Id">Email: </label>
                     </td> <td>
-                        <input type="email" required id="email" name="email" class="input_signUp" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="___@___.___">
+                        <input type="email" required id="email" name="email" class="input_signUp" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="___@___.___"><br>
                     </td> </tr> <tr> <td> 
-                        <label for="password" id="Labels_Id">Password: </label>
+                        <label for="message" id="Labels_Id">Your message: </label>
                     </td> <td>
-                        <input type="password" required id="password" class="input_signUp" required minlength="8" name="password" placeholder="at least 8 characters long">
+                        <textarea name="message" required id="message" cols="30" rows="10" class="input_signUp"></textarea><br>
                     </td> </tr>
                 </table>
                 <table  cellpadding="8" cellspacing="3">
                     <tr><td>
-                        <button type="submit">Sign In</button>
+                        <button type="submit">Submit</button>
                     </td></tr>
-                </table>
+                </table> 
             </form>
-            <table  cellpadding="10" cellspacing="0">
-                <tr><td>
-                    <button type="submit" id="NewHere_button">New here? <br> Join us</a></button>
-                </td></tr>
-            </table>
-            
+        </div>
         </div>
     </div>
     

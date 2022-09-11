@@ -6,36 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload new item</title>
     <link rel="stylesheet" href="../static/StyleSheet.css">
+    <script defer src="../static/ProjectJS.js"></script>
 </head>
 <body>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="list-item"><a href="openingScreen.html">Log Out</a></li>
+            <li class="list-item"><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+    </nav>
     <div id="NI_container">
         <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" width="120" height="120"></div>
         <div id="Container_Header">
             <p>Upload a new item for auction</p>
         </div>
         <div id="Upload" class="info">
-            <form action="myprofile_itamar.html"> <!--Update action-->
-                <label for="ItemsName" id="Labels_Id">Item’s name: </label><br>
-                <input type="text" required id="ItemsName" class="input_Upload" name="ItemsName"><br>
-                <label for="LastDate" id="Labels_Id">Last date for suggestions: </label><br>
-                <input type="date" required id="LastDate" class="input_Upload" name="LastDate"><br>
-                <label for="Category" id="Labels_Id">Category: </label><br>
-                <select name="Category" class="input_Upload" id="CategoryList">
-                    <option value="MusicalInstruments">Musical Instruments</option>
-                    <option value="Furniture">Furniture</option>
-                    <option value="Books">Books</option>
-                    <option value="Clothing">Clothing</option>
-                    <option value="Comic">Comic</option>
-                    <option value="Cameras">Cameras</option>
-                    <option value="Headphones">Headphones</option>
-                    <option value="Watchs">Watchs</option>
-                    <option value="Else">Else</option>
-                </select><br>
-                <label for="Description" id="Labels_Id">Description: </label><br>
-                <textarea name="Description" id="Description" cols="30" rows="10" class="input_Upload"></textarea><br>
-                <label for="ItemsPicture" id="Labels_Id">Upload Items's Picture:</label><br>
-                <input type="file" class="input_Upload" id="ItemsPicture" name="ItemsPicture"  accept="image/png, image/gif, image/jpeg" required><br>
-                <button type="submit" onclick="" class="Upload_button">Upload item for auction</button>
+            <form action=""> <!--Update action-->
+                <table cellpadding="10" cellspacing="3">
+                    <tr> <td>
+                        <label for="ItemsName" id="Labels_Id">Item’s name: </label>
+                    </td> <td>
+                        <input type="text" required id="ItemsName" class="input_Upload" name="ItemsName"><br>
+                    </td> </tr> <tr> <td> 
+                        <label for="LastDate" id="Labels_Id">Last date for suggestions: </label>
+                    </td> <td>
+                        <input type="date" required id="LastDate" class="input_Upload" name="LastDate"><br>
+                    </td> </tr> <tr> <td> 
+                        <label for="Category" id="Labels_Id">Category: </label>
+                    </td> <td>
+                        <select name="Category" class="input_Upload" required id="CategoryList" >
+                            <option value="MusicalInstruments">Musical Instruments</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Books">Books</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Comic">Comic</option>
+                            <option value="Cameras">Cameras</option>
+                            <option value="Headphones">Headphones</option>
+                            <option value="Watchs">Watchs</option>
+                            <option value="Else">Else</option>
+                        </select><br>
+                    </td> </tr> <tr> <td> 
+                        <label for="ItemsPicture" id="Labels_Id">Upload Items's Picture:</label>
+                    </td> <td>
+                        <input type="file" class="input_Upload" id="ItemsPicture" name="ItemsPicture"  accept="image/png, image/gif, image/jpeg" ><br>
+                    </td> </tr> <tr> <td> 
+                        <label for="Description" id="Labels_Id">Description: </label>
+                    </td> <td>
+                        <textarea name="Description" id="Description" cols="30" rows="5" class="input_Upload"></textarea><br>
+                    </td> </tr>
+                </table>
+                <table  cellpadding="8" cellspacing="3">
+                    <tr><td>
+                        <button type="submit" onclick="" class="Upload_button">Upload item for auction</button>
+                    </td></tr>
+                </table>
+            </form>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             </form>
         </div>
     </div>

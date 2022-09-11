@@ -6,8 +6,8 @@
 
 
 :root {
-    --MyBlack: rgb(2, 2, 2);
-    --MyWhite: rgb(237, 240, 243);
+    --MyBlack: 	#000000;
+    --MyWhite:	#FFFFFF;
     --MyDarkerBlue: #257ba6;
     --MyLighterBlue: #96e0ef;
     --MyGreyBlue: #bcdcd6;
@@ -16,6 +16,46 @@
     --MyDarkerPurple: #8630d1;
     --MyRed: #db2505;
     --MyGrey: #808080;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.Active {
+    border: 2px solid var(--MyDarkerBlue);
+    border-radius: 5px;
+
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.nav {
+    font-weight: bold;   
+	font-size: 17px;
+    display: right; 
+}
+
+
+.nav-list {
+    text-align: right;
+    margin-right: 10px; 
+}
+
+.nav-list .list-item{
+    display: inline-block;
+    padding: 7px;
+}
+
+.nav a{
+    color: var(--MyDarkerBlue);
+}
+
+ .nav a:hover{
+    background-color: var(--MyLighterBlue);
 }
 
 body{
@@ -53,6 +93,12 @@ body{
     'logo Upload';
 }
 
+#Contact_container{
+    display: grid;
+    grid-template-areas: 
+    'logo Header'
+    'logo contactForm';
+}
 /*
 #changing{
     grid-area: changing;
@@ -65,9 +111,10 @@ body{
     text-align: center;
 }
 */
+
 #Container_Header{
     grid-area: Header;
-    height: 15vh;
+    height: 10vh;
     width: 75vw;
     text-align: center;
     letter-spacing: 1px;
@@ -76,19 +123,22 @@ body{
     font-weight: bold;
 }
 
-
 #Container_Logo{
     grid-area: logo;
     height: 20vh;
     width: 10vw;
     text-align: right;
+}
 
+#form-contact{
+    grid-area: contactForm;
+    height: 45vh;
+    width: 75vw;
 }
 
 #Upload{
     grid-area: Upload;
     height: 35vh;
-    text-align: center;
     line-height: 2;
 }
 
@@ -113,13 +163,12 @@ body{
 }
 
 .info{
-    margin-top: 15px; 
+    margin-top: 80px;
 }
 
 #form-container_sign-in{
     grid-area: signIn;
-    height: 45vh;
-    text-align: center;
+    height: 65vh;
     width: 75vw;
     line-height: 2;
 }
@@ -128,7 +177,7 @@ body{
 #form-container_sign-up{
     grid-area: signUpPage;
     height: 45vh;
-    text-align: center;
+    
     width: 75vw;
 }
 
@@ -144,6 +193,11 @@ body{
     margin-bottom: 1%;
     margin-top: 2%;
     font-size: 14px;
+}
+
+table{
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /*
@@ -176,7 +230,6 @@ body{
 
 #Labels_Id{
     font-size: 23px;
-    line-height: 2;
 }
 
 .input_signUp, .input_Upload{
@@ -200,8 +253,21 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+@keyframes HoverButton {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+#NewHere_button :hover{
+    animation-name: HoverButton;
+    animation-duration: 1s;
+}
+
 button {
-	border-radius: 50%;
+	border-radius: 8px;
 	background-color: var(--MyGreyBlue);
     border: 2px solid var(--MyDarkerBlue);
     color: var(--MyDarkerBlue);
@@ -210,7 +276,6 @@ button {
 	letter-spacing: 2px;
     padding: 12px 45px;
 	text-transform: uppercase;
-	/*transition: transform 80ms ease-in;*/
     cursor: pointer;
     font-size: 20px;
     margin-top: 3%;
@@ -225,8 +290,7 @@ button {
 }
 
 
-.Sugg_button, .Upload_button{
-    border-radius: 8px;
+.Sugg_button{
     padding: 7px 20px;
     font-size: 15px;
     cursor: pointer;
@@ -266,6 +330,11 @@ button {
 */
 
 @media only screen and (max-width: 800px){
+
+    .nav-list {
+        text-align: center;
+        margin-right: 10px; 
+    }
 
     #OS_container{
         display: grid;
