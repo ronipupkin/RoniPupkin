@@ -22,7 +22,7 @@
             <p>Create your Account</p>
         </div>
         <div id="form-container_sign-up" class="info">
-            <form id="signUp_form" action=""> <!--Update action-->
+            <form id="signUp_form" action="" onsubmit="return BirthDATECheck()"> <!--Update action-->
                 <table cellpadding="10" cellspacing="3">
                     <tr> <td>
                         <label for="email" id="Labels_Id">Email: </label>
@@ -43,9 +43,9 @@
                     </td> </tr> <tr> <td> 
                         <label for="accountType" id="Labels_Id">Do you want to? </label>
                     </td> <td>  
-                        <input type="radio" id="Sell_Check" name="Want_to" value="SELL">
+                        <input type="radio" required id="Sell_Check" name="Want_to" value="SELL">
                         <label for="Sell_Check">SELL</label>
-                        <input type="radio" id="Buy_Check" name="Want_to" value="BUY">
+                        <input type="radio" required id="Buy_Check" name="Want_to" value="BUY">
                         <label for="Buy_Check">BUY</label><br>
                     </td> </tr>
                 </table>

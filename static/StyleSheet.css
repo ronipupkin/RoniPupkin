@@ -261,9 +261,19 @@ table{
     100% {background-color:red; left:0px; top:0px;}
 }
 
-#NewHere_button :hover{
-    animation-name: HoverButton;
-    animation-duration: 1s;
+.heart_item{
+    grid-area: heart_item;
+    animation: zoom-in-zoom-out 2s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {transform: scale(1, 1);}
+    50% {transform: scale(1.15, 1.15);}
+    100% {transform: scale(1, 1);}
+}
+
+button:hover {
+    animation: zoom-in-zoom-out 2s ease infinite;
 }
 
 button {

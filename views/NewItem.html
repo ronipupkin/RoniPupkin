@@ -21,7 +21,7 @@
             <p>Upload a new item for auction</p>
         </div>
         <div id="Upload" class="info">
-            <form action=""> <!--Update action-->
+            <form action="" onsubmit="return LastDateCheck()"> <!--Update action-->
                 <table cellpadding="10" cellspacing="3">
                     <tr> <td>
                         <label for="ItemsName" id="Labels_Id">Item’s name: </label>
@@ -35,6 +35,7 @@
                         <label for="Category" id="Labels_Id">Category: </label>
                     </td> <td>
                         <select name="Category" class="input_Upload" required id="CategoryList" >
+                            <option hidden>Choose Category</option>
                             <option value="MusicalInstruments">Musical Instruments</option>
                             <option value="Furniture">Furniture</option>
                             <option value="Books">Books</option>
