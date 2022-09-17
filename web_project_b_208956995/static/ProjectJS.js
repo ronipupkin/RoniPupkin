@@ -10,6 +10,15 @@ const activeNav = document.querySelectorAll('nav a').forEach(
     }
 )
 
+const activeFooter = document.querySelectorAll('footer a').forEach(
+    MyLinks => {
+        if (MyLinks.href.includes(`${ActivePage}`)) {
+            MyLinks.classList.add('ActiveFooter');
+        }
+
+    }
+)
+
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth()+1; //January is 0 so need to add 1 to make it 1!
@@ -23,7 +32,7 @@ if(mm<10){
 
 today = yyyy+'-'+mm+'-'+dd;
 var tDate = new Date(today);
-//document.getElementById("LastDate").setAttribute("LastDateForSugg", today);//
+
 
 function LastDateCheck()
 {
@@ -37,8 +46,9 @@ function LastDateCheck()
     }
 }
 
-function BirthDATECheck()
+function SignUpCheck()
 {
+    //birth-date check + password check
   var BDate= document.getElementById('Birth-Date').value;
   var bDate = new Date(BDate);
 
@@ -46,13 +56,22 @@ function BirthDATECheck()
   var YearEighteenYearsAgo = yyyy-18;
   EighteenYearsAgo = YearEighteenYearsAgo+'-'+mm+'-'+dd;
   var EighteenYearsAgoDate = new Date(EighteenYearsAgo);
-  
-  console.log(EighteenYearsAgoDate);
-  console.log(bDate);
 
-  if(bDate > EighteenYearsAgoDate)
+  var Pass= document.getElementById('password').value;
+  var CheckPass= document.getElementById('CheckPassword').value;
+
+  if(bDate > EighteenYearsAgoDate){
+    if(Pass!= '' && CheckPass!= '' && Pass != CheckPass){
+        alert("Please ensure that you type yout password correct in 2 places. Use of this website is for 18+ years old.");
+    } else{
+        alert("Use of this website is for 18+ years old.");
+    }
+    return false;
+    }
+
+  if(Pass!= '' && CheckPass!= '' && Pass != CheckPass)
     {
-    alert("Use of this website is for 18+ years old.");
+    alert("Please ensure that you type yout password correct in 2 places.");
     return false;
     }
 }
