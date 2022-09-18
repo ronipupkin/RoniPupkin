@@ -213,6 +213,7 @@ a:link {
   grid-area: about;
   width: fit-content;
   border: 2px solid var(--MyLighterBlue);
+  background-image: linear-gradient(0deg, var(--MyLight),transparent);
   text-align: center;
   border-radius: 5px;
   margin: auto;
@@ -282,15 +283,15 @@ button:hover {
 }
 
 button {
-border-radius: 8px;
-background-color: var(--MyGreyBlue);
+  border-radius: 8px;
+  background-color: var(--MyGreyBlue);
   border: 2px solid var(--MyDarkerBlue);
   color: var(--MyDarkerBlue);
-font-weight: bold;
+  font-weight: bold;
   font-family: Aboreto; 
-letter-spacing: 2px;
+  letter-spacing: 2px;
   padding: 12px 45px;
-text-transform: uppercase;
+  text-transform: uppercase;
   cursor: pointer;
   font-size: 20px;
   margin-top: 1%;
@@ -336,10 +337,10 @@ text-transform: uppercase;
 
 }
 
+
 @media only screen and (min-width: 800px){
   #Sugg-container .mainItems .items{
     display: flex;
-  
   }
 }
 
