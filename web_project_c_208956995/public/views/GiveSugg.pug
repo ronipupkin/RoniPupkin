@@ -1,0 +1,102 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Upload new item
+    link(rel='stylesheet', href='../static/StyleSheet.css')
+    script(defer='', src='../static/ProjectJS.js')
+  body
+    #GiveSuggestions_container
+      #header
+        header
+          nav.nav
+            ul.nav-list
+              li.list-item
+                a(href='/openingScreen') Log Out
+              li.list-item
+                a(href='/aboutUs') About Us
+      #Container_Logo
+        img#logo(src='../static/logo.png' alt='Logo')
+      #Container_Header
+        | Give Quotes for items
+      #SearchCategory.info
+        form(action='/showItemsBySearch' method='get' onsubmit='return checkCategory()')
+          label#searchLabel(for='Category') Search item by category: 
+          select#CategoryList.input_Upload(name='Categories')
+            option(value='') Choose Category
+            option(value='Musical Instruments') Musical Instruments
+            option(value='Furniture') Furniture
+            option(value='Books') Books
+            option(value='Clothing') Clothing
+            option(value='Comic') Comic
+            option(value='Cameras') Cameras
+            option(value='Headphones') Headphones
+            option(value='Watchs') Watchs
+            option(value='Else') Else
+            option(value='Show All') Show All
+          label(for='usersEmailSugg') 
+          input#usersEmailSugg(type='email' required='' name='usersEmailSugg' value=varEmail)
+          button#chooseCategory_button.Sugg_button(type='submit' onclick='') Search
+      #Container_Note 
+        p#Notice #{var1} 
+        p#Notice #{var2} 
+        p#Success #{var3}
+        p#Success #{var4}
+      #Sugg-container.info
+        .mainItems
+          .items
+            each n in itemsToShow
+              .item
+                form(action='/giveSugg' method='post')
+                    .content
+                        #itemPicture
+                        img.PictureItem(src=n.picture alt='itemPicture')
+                        .itemName
+                        h2 #{n.itemName}
+                        .itemDescription
+                        p #{n.description}
+                        .InfoItem
+                        p.itemInfo
+                            | Item number:
+                            | #{n.itemId}
+                        p.itemInfo
+                            | Category:
+                            br
+                            | #{n.category}
+                        p.itemInfo
+                            | Last date for suggestions:
+                            br
+                            | #{n.day_lastDate}
+                            | /
+                            | #{n.month_lastDate}
+                            | /
+                            | #{n.year_lastDate}
+                        p.itemInfo
+                            | Highest price offered yet:
+                            br
+                            | #{n.highestPrice}
+                            | $  
+                        p.itemInfo
+                            | Price you offered:
+                            br
+                            | #{n.quotationPrice}  
+                            | $  
+                        .itemOffer
+                                        
+                            label(for='OfferPrice') Offer price ($) : 
+                            input#OfferPrice.PriceOffer(type='number' required='' name='OfferPrice')
+                            br
+                            label(for='usersEmailSugg') 
+                            input#usersEmailSugg(type='email' required='' name='usersEmailSugg' value=varEmail)
+                            label(for='itemIdSugg') 
+                            input#itemIdSugg(type='number' required='' name='itemIdSugg' value=n.itemId)
+                            br
+                            button.Sugg_button(type='submit' onclick='') Send Offer
+      .footer_right
+        footer
+            a(href='/ContactUs')   Contact Us
+      .footer_left
+        footer
+            p &copy; 2022 All Rights Reserved

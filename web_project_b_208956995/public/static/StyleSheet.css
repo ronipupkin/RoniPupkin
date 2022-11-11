@@ -1,0 +1,584 @@
+@font-face {
+  font-family: Aboreto;
+  src: url(../static/Aboreto-Regular.ttf);
+}
+
+@font-face {
+  font-family: DancingScript;
+  src: url(../static/DancingScript-VariableFont_wght.ttf);
+}
+
+:root { 
+
+    --MyBlack: 	#000000;
+    --MyWhite:	#FFFFFF;
+    --MyDarkerBlue: #257ba6;
+    --MyLighterBlue: #6ecbde;
+    --MyGreyBlue: #b5d4e7;
+    --MyLight:  #a4badc; 
+    --MyPurple: #d3c5df;
+    --MyDarkerPurple: #8630d1;
+    --MyRed: #db2505;
+    --MyGrey: #808080;
+}
+
+* {
+    box-sizing: border-box; 
+}
+
+.footer_right{
+  text-align: right;
+  grid-area: footerRight;
+  margin-right: 10px; 
+}
+
+.footer_right a:hover{
+  background-color: var(--MyGreyBlue);
+  border-radius: 5px;
+}
+
+.ActiveFooter{
+  border: 2px solid var(--MyBlack);
+  border-radius: 5px;
+}
+
+.footer_left{
+  grid-area: footerLeft;
+  font-family: DancingScript;
+  margin-left: 10px; 
+}
+
+footer a{
+  font-family: DancingScript;
+  font-size: 30px;
+  color: var(--MyBlack);
+}
+
+#contact_logo{
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  padding-top: 10px;
+}
+
+body{
+  background-image: url(../static/WallPaper.jpg);
+  background-size: cover;
+  font-family: Aboreto;
+  /*justify-content: center;
+  flex-direction: column;*/
+  position: relative;
+}
+
+.Active {
+  border: 2px solid var(--MyDarkerBlue);
+  border-radius: 5px;
+}
+
+
+a:link {
+  text-decoration: none;
+}
+
+.nav {
+  font-weight: bold;   
+  font-size: 17px;
+  display: right; 
+}
+
+
+.nav-list {
+  text-align: right;
+  margin-right: 10px; 
+  margin-top: 30px;
+}
+
+.nav-list .list-item{
+  display: inline-block;
+  padding: 7px;
+}
+
+.nav a{
+  color: var(--MyDarkerBlue);
+}
+
+.nav a:hover{
+  background-color: var(--MyLighterBlue);
+  border-radius: 5px;
+}
+
+#OS_container{
+  display: grid;
+  grid-template-areas: 
+  'logo FormHeader'
+  'Header Header '
+  'signIn signIn '
+  'footerLeft footerRight ';
+}
+
+#About_container{
+  display: grid;
+  grid-template-areas: 
+  'logo FormHeader'
+  'Header Header '
+  'about about '
+  'footerLeft footerRight ';
+}
+
+#SU_container{
+  display: grid;
+  grid-template-areas: 
+  'logo FormHeader'
+  'Header Header '
+  'signUpPage signUpPage '
+  'footerLeft footerRight ';
+}
+
+#UP_container{
+  display: grid;
+  grid-template-areas: 
+  'logo FormHeader'
+  'Header Header '
+  'UpdatePersonal UpdatePersonal '
+  'footerLeft footerRight ';
+}
+
+#GiveSuggestions_container{
+  display: grid;
+  grid-template-areas: 
+  'logo FormHeader'
+  'Header Header '
+  'SCategory SCategory '
+  'Sugg Sugg'
+  'footerLeft footerRight ';
+}
+
+#NI_container{
+  display: grid;
+  grid-template-areas: 
+  'logo FormHeader'
+  'Header Header'
+  'Upload Upload'
+  'footerLeft footerRight ';
+}
+
+#Contact_container{
+  display: grid;
+  grid-template-areas: 
+  'logo FormHeader'
+  'Header Header'
+  'contactForm contactForm'
+  'footerLeft footerRight ';
+}
+
+#header{
+  grid-area: FormHeader;
+}
+
+#form-container_Update{
+  grid-area: UpdatePersonal;
+}
+
+#Container_Header{
+  grid-area: Header;
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 10px;
+  font-size: 47px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#Container_Logo{
+  grid-area: logo;
+  text-align: left;
+}
+
+#logo{
+  width: 100px;
+  width: 100px;
+}
+
+#form-contact{
+  grid-area: contactForm;
+}
+
+#Upload{
+  grid-area: Upload;
+  line-height: 2;
+}
+
+#Container_about{
+  grid-area: about;
+  width: fit-content;
+  border: 2px solid var(--MyLighterBlue);
+  background-image: linear-gradient(0deg, var(--MyLight),transparent);
+  text-align: center;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 3%;
+}
+
+#SearchCategory{
+  grid-area: SCategory;
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+#searchLabel{
+  font-weight: bold;
+}
+
+
+#form-container_sign-in{
+  grid-area: signIn;
+  line-height: 2;
+}
+
+
+#form-container_sign-up{
+  grid-area: signUpPage;    
+
+}
+
+
+table{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+
+#Labels_Id{
+  font-size: 23px;
+}
+
+.input_signUp, .input_Upload{
+  padding: 7px;
+  border: 2px solid var(--MyGrey);
+  border-radius: 8px;
+}
+
+.PriceOffer{
+  border: 2px solid var(--MyGrey);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: Aboreto; 
+  text-align: center;
+}
+
+#LastDate, #Birth-Date{
+  font-family: Aboreto; 
+}
+
+#SignIn_note{
+  display: none;
+  color: var(--MyRed);
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {transform: scale(1, 1);}
+  50% {transform: scale(1.15, 1.15);}
+  100% {transform: scale(1, 1);}
+}
+
+button:hover {
+  animation: zoom-in-zoom-out 2s ease infinite;
+}
+
+button {
+  border-radius: 8px;
+  background-color: var(--MyGreyBlue);
+  border: 2px solid var(--MyDarkerBlue);
+  color: var(--MyDarkerBlue);
+  font-weight: bold;
+  font-family: Aboreto; 
+  letter-spacing: 2px;
+  padding: 12px 45px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 1%;
+}
+
+
+#NewHere_button{
+  background-color: var(--MyPurple);
+  color: var(--MyDarkerPurple);
+  border: 2px solid var(--MyDarkerPurple);
+  margin-top: 2%;
+  
+}
+
+
+.Sugg_button{
+  padding: 7px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.formHeadings{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.custom_select{
+  font-family: Aboreto; 
+  font-size: 20px;
+  padding: 7px;
+}
+
+#CategoryList{
+  font-family: Aboreto; 
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 8px;
+}
+
+#Sugg-container{
+  overflow: auto;
+  grid-area: Sugg;
+
+}
+
+
+@media only screen and (min-width: 800px){
+  #Sugg-container .mainItems .items{
+    display: flex;
+  }
+}
+
+
+
+#Sugg-container, .item {
+  display: inline-block;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  justify-content: space-evenly;
+  transition: 1s;
+}
+
+
+.item{
+  background-image: linear-gradient(0deg, var(--MyPurple),transparent);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 5px 10px var(--MyGrey);
+  transition: all 0.4s ease;
+  width: 225px;
+}
+
+.PictureItem{
+  height: 100px;
+  width: 100px;
+  border-radius: 80%;
+  padding: 3px;
+  margin-bottom:3px;
+}
+
+.mainItems .items .item:hover{
+  transform: translateY(-15px);
+  background-image: linear-gradient(180deg, var(--MyPurple),transparent);
+
+}
+
+
+.itemDescription{
+  font-weight: bold;
+  font-size: smaller;
+}
+
+.itemInfo{
+  font-size: smaller;
+}
+
+h2{
+  margin: 10px 0px;
+}
+
+
+
+@media only screen and (max-width: 800px){
+
+  .nav-list {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#OS_container{
+    display: grid;
+    grid-template-areas: 
+    'FormHeader'
+    'logo'
+    'Header'
+    'signIn'
+    'footerRight'
+    'footerLeft';
+}
+
+#UP_container{
+    display: grid;
+    grid-template-areas: 
+    'FormHeader'
+    'logo '
+    'Header  '
+    'UpdatePersonal  '
+    'footerRight'
+    'footerLeft';
+}
+
+#SU_container{
+    display: grid;
+    grid-template-areas: 
+    'FormHeader'
+    'logo'
+    'Header'
+    'signUpPage'
+    'footerRight'
+    'footerLeft';
+}
+
+#GiveSuggestions_container{
+    display: grid;
+    grid-template-areas: 
+    'FormHeader'
+    'logo'
+    'Header'
+    'SCategory'
+    'Sugg'
+    'footerRight'
+    'footerLeft';
+}
+
+#NI_container{
+    display: grid;
+    grid-template-areas: 
+    'FormHeader'
+    'logo'
+    'Header'
+    'Upload'
+    'footerRight'
+    'footerLeft';
+}
+
+#Contact_container{
+    display: grid;
+    grid-template-areas: 
+    'FormHeader'
+    'logo'
+    'Header'
+    'contactForm'
+    'footerRight'
+    'footerLeft';
+}
+
+#About_container{
+  display: grid;
+  grid-template-areas: 
+  'FormHeader'
+  'logo'
+  'Header'
+  'about'
+  'footerRight'
+  'footerLeft';
+
+}
+
+  #Container_Header{
+      grid-area: Header;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 1px;
+      word-spacing: 10px;
+      font-size: 40px;
+      font-weight: bold;
+      margin-top: 35px;
+      margin-bottom: 35px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #Container_Logo{
+      grid-area: logo;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #form-container_sign-in{
+      grid-area: signIn;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #form-container_sign-up{
+      grid-area: signUpPage;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .info{
+      margin-top: 5px;
+  }
+  
+  #SearchCategory{
+      grid-area: SCategory;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #Sugg-container{
+    overflow: auto;
+    grid-area: Sugg;
+  
+  }
+
+  
+  #Sugg-container, .item {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    justify-content: space-evenly;
+    transition: 1s;
+  }
+  
+  
+  .item{
+    background-image: linear-gradient(0deg, var(--MyPurple),transparent);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 5px 10px var(--MyGrey);
+    transition: all 0.4s ease;
+    width: 225px;
+  }
+
+  .mainItems .items .item:hover{
+    transform: translateY(0px);
+    background-image: linear-gradient(180deg, var(--MyPurple),transparent);
+  
+  }
+
+  #Labels_Id{
+    font-size: 18px;
+  }
+
+  .footer_right{
+    text-align: center;
+    margin-top: 5%;
+    grid-area: footerRight;
+    margin-right: 0px;
+  }
+
+  .footer_left{
+    grid-area: footerLeft;
+    font-family: DancingScript;
+    text-align: center;
+    margin-left: 0px; 
+  }
+  
+}

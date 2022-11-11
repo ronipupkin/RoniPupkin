@@ -1,0 +1,87 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title SignUp
+    link(rel='stylesheet', href='../static/StyleSheet.css')
+    script(defer='', src='../static/ProjectJS.js')
+  body
+    #SU_container
+      #header
+        header
+          nav.nav
+            ul.nav-list
+              li.list-item
+                a(href='/openingScreen') Home
+              li.list-item
+                a(href='/aboutUs') About Us
+      #Container_Logo
+        img#logo(src='../static/logo.png', alt='Logo')
+      #Container_Header
+        | Create your Account
+      #Container_Note 
+        p#Notice #{var1}
+      #form-container_sign-up.info
+        form#signUp_form(action='/newUser', method='POST', onsubmit='return SignUpCheck()')
+          table(cellpadding='10', cellspacing='3')
+            tbody
+              tr
+                td
+                  label#Labels_Id(for='email') Email: 
+                |  
+                td
+                  input#email.input_signUp(type='email', required='', name='userEmail', maxlength='255', pattern='[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$', placeholder='___@___.___')
+              |  
+              tr
+                td
+                  label#Labels_Id(for='password') Password: 
+                |  
+                td
+                  input#password.input_signUp(type='password', required='', maxlength='255', minlength='8', name='userPassword', placeholder='Min Lengh: 8')
+              |  
+              tr
+                td
+                  label#Labels_Id(for='CheckPassword') Check Password: 
+                |  
+                td
+                  input#CheckPassword.input_signUp(type='password', required='', minlength='8', name='CheckPassword', placeholder='Type your password again')
+              |  
+              tr
+                td
+                  label#Labels_Id(for='Name') Name: 
+                |  
+                td
+                  input#Name.input_signUp(type='text', re='', quired='', maxlength='255', name='userName', placeholder='Israel Israeli')
+                  br
+              |  
+              tr
+                td
+                  label#Labels_Id(for='Birth-Date') Birth-Date: 
+                |  
+                td
+                  input#Birth-Date.input_signUp(type='date', required='', name='userBirthDate')
+                  br
+              |  
+              tr
+                td
+                  label#Labels_Id(for='accountType') Do you want to? 
+                |  
+                td
+                  input#Sell_Check(type='radio', required='', name='userAccountType', value='SELL')
+                  label(for='Sell_Check') SELL
+                  input#Buy_Check(type='radio', required='', name='userAccountType', value='BUY')
+                  label(for='Buy_Check') BUY
+                  br
+          table(cellpadding='8', cellspacing='3')
+            tbody
+              tr
+                td
+                  button#signUp_button(type='submit') Sign Up
+      .footer_right
+        footer
+          a(href='/ContactUs')   Contact Us
+      .footer_left
+        footer
+          p &copy; 2022 All Rights Reserved

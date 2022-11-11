@@ -1,0 +1,16 @@
+{
+  "name": "web_project_b_208956995",
+  "version": "1.0.0",
+  "description": "<!--\r ***I write in English to make it clearer because I write in Visual Studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3"
+  }
+}

@@ -1,0 +1,9 @@
+email,password,name,birthDateDay,birthDateMonth,birthDateYear,accountType,uploadedOnTime,uploadedOnDay,uploadedOnMonth,uploadedOnYear
+roni@post.com,11111111,roni,9,2,1997,BUY,14:47:00,29,9,2022
+amit@post.com,11111111,amit,19,6,1998,BUY,09:07:00,29,9,2022
+anat@gmail.com,19191919,anat,8,8,1998,SELL,09:12:00,29,9,2022
+beni@gmail.com,12121212,beni,1,2,1990,SELL,20:40:00,27,10,2022
+naama@gmail.com,12345678,naama,2,2,1980,BUY,15:19:00,29,9,2022
+oran@gmail.com,55555555,oran,7,7,1999,SELL,14:29:00,2,10,2022
+roni@post.com,12345678,roni,7,3,2000,SELL,13:58:00,25,9,2022
+tal@gmail.com,22222222,tal,6,7,1998,BUY,09:11:00,29,9,2022

@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Contact Us
+    link(rel='stylesheet', href='../static/StyleSheet.css')
+    script(defer='', src='../static/ProjectJS.js')
+  body
+    #Contact_container
+      #header
+        header
+          nav.nav
+            ul.nav-list
+              li.list-item
+                a(href='/openingScreen') Home
+              li.list-item
+                a(href='/aboutUs') About Us
+      #Container_Logo
+        img#logo(src='../static/logo.png', alt='Logo')
+      #Container_Header
+        | Tell us what&apos;s on your mind
+      #Container_Note 
+        p#Success #{var1} #{var2}
+      #form-contact.info
+        form#contact_form(action='/sendMessage', method='POST')
+          table(cellpadding='10', cellspacing='3')
+            tbody
+              tr
+                td
+                  label#Labels_Id(for='name') Name: 
+                |  
+                td
+                  input#name.input_signUp(type='text', required='', name='messageName', maxlength='255', placeholder='Israel Israeli')
+                  br
+              |  
+              tr
+                td
+                  label#Labels_Id(for='email') Email: 
+                |  
+                td
+                  input#email.input_signUp(type='email', required='', name='messageEmail', maxlength='255', pattern='[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$', placeholder='___@___.___')
+                  br
+              |  
+              tr
+                td
+                  label#Labels_Id(for='message') Your message: 
+                |  
+                td
+                  textarea#message.input_signUp(name='messageText', required='', cols='30', rows='10', maxlength='1000')
+                  br
+          table(cellpadding='8', cellspacing='3')
+            tbody
+              tr
+                td
+                  button(type='submit') Submit
+      .footer_right
+        footer
+          a(href='/ContactUs')   Contact Us
+      .footer_left
+        footer
+          p &copy; 2022 All Rights Reserved

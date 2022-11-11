@@ -1,0 +1,76 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Opening Screen - Auction House
+    link(rel='stylesheet', href='../static/StyleSheet.css')
+    script(defer='', src='../static/ProjectJS.js')
+  body
+    #OS_container
+      #header
+        header
+          nav.nav
+            ul.nav-list
+              li.list-item
+                a(href='/LoadTables') Load Tables
+              li.list-item
+                a(href='/openingScreen') Home
+              li.list-item
+                a(href='/aboutUs') About Us
+      #Container_Logo
+        img#logo(src='../static/logo.png', alt='Logo')
+      #Container_Header
+        | Welcome to Auction House
+      #Container_Note 
+        p#Success #{var1} #{var2}
+        p#Notice #{var3}
+      #form-container_sign-in.info
+        form(action='/logIn' method='get')
+          // Update action
+          table(cellpadding='10', cellspacing='3')
+            tbody
+              tr
+                td
+                  label#Labels_Id(for='email') Email: 
+                |  
+                td
+                  input#email.input_signUp(type='email', required='', name='logInEmail', pattern='[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$', placeholder='___@___.___')
+              |  
+              tr
+                td
+                  label#Labels_Id(for='password') Password: 
+                |  
+                td
+                  input#password.input_signUp(type='password', required='', minlength='8', name='logInPassword', placeholder='Min Lengh: 8')
+              tr
+                td
+                  label#Labels_Id.typeOpening(for='accountType') I am.. 
+                |  
+                td
+                  input#Sell_Check.typeOpening(type='radio', required='', name='logInUserAccountType', value='SELL')
+                  label.typeOpening(for='Sell_Check') SELLING
+                  input#Buy_Check.typeOpening(type='radio', required='', name='logInUserAccountType', value='BUY')
+                  label.typeOpening(for='Buy_Check') BUYING
+                  br
+          table(cellpadding='8', cellspacing='3')
+            tbody
+              tr
+                td
+                  button(type='submit') Sign In
+        table(cellpadding='10', cellspacing='0')
+          tbody
+            tr
+              td
+                button#NewHere_button(type='submit', onclick="window.location.href = '/SignUp'")
+                  | New here? 
+                  br
+                  |  Join us
+      .footer_right
+        footer
+          .footer_right_total
+            a(href='/ContactUs')   Contact Us
+      .footer_left
+        footer
+          p &copy; 2022 All Rights Reserved

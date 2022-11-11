@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../static/StyleSheet.css">
+    <script defer src="../static/ProjectJS.js"></script>
+</head>
+<body>
+    <div id="Contact_container">
+        <div id="header">
+            <header>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="list-item"><a href="./openingScreen.html">Home</a></li>
+                        <li class="list-item"><a href="./about.html">About Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div id="Container_Logo"><img src="../static/logo.png" alt="Logo" id="logo"></div>
+        <div id="Container_Header">
+            Tell us what's on your mind
+        </div>
+        <div id="form-contact" class="info">
+            <form id="contact_form" action="/sendMessage" method="POST"> 
+                <table cellpadding="10" cellspacing="3">
+                    <tr> <td>
+                        <label for="name" id="Labels_Id">Name: </label>
+                    </td> <td>
+                        <input type="text" required id="name" name="messageName" maxlength="255" class="input_signUp" placeholder="Israel Israeli"><br>                        
+                    </td> </tr> <tr> <td> 
+                        <label for="email" id="Labels_Id">Email: </label>
+                    </td> <td>
+                        <input type="email" required id="email" name="messageEmail" maxlength="255" class="input_signUp" required pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="___@___.___"><br>
+                    </td> </tr> <tr> <td> 
+                        <label for="message" id="Labels_Id">Your message: </label>
+                    </td> <td>
+                        <textarea name="messageText" required id="message" cols="30" rows="10" maxlength="1000" class="input_signUp"></textarea><br>
+                    </td> </tr>
+                </table>
+                <table  cellpadding="8" cellspacing="3">
+                    <tr><td>
+                        <button type="submit" >Submit</button>
+                    </td></tr>
+                </table> 
+            </form>
+        </div>
+        <div class="footer_right">
+            <footer>
+                <a href="./ContactUs.html">  Contact Us</a>
+            </footer>
+        </div>       
+         <div class="footer_left">
+            <footer>
+                <p>© 2022 All Rights Reserved</p>
+            </footer>
+    </div>
+    
+</body>
+</html>

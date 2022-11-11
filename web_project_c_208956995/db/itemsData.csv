@@ -1,0 +1,6 @@
+userEmail,itemName,lastDateDay,lastDateMonth,lastDateYear,category,picture,description,highestPrice,uploadedOnTime,uploadedOnDay,uploadedOnMonth,uploadedOnYear
+anat@gmail.com,Book,10,11,2022,books,../static/book.png,black old book,100, 11:11:00,1,10,2022
+ oran@gmail.com,Guitar,1,12,2022,Musical Instruments,../static/guitar.png,Black Guitar,80, 11:00:00,3,10,2022
+beni@gmail.com,Headphones,3,12,2022,Headphones,../static/headphones.png,orange headphones,70, 21:00:00,27,10,2022
+roni@post.com,Camera,15,1,2023,Cameras,../static/camera.png,old great camera,70, 12:33:00,10,10,2022
+beni@gmail.com,Sofa,21,2,2023,Furniture,../static/yellow_sofa.png,Comfy yellow sofa,50, 10:10:00,10,11,2022
